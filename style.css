@@ -711,17 +711,14 @@ header{
     }
 
     .trois .class-wrapper{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
     }
 
     .classbox{
         width: 400px;
         height: 400px;
-        margin: 0 30px;
     }
 
     .imgc{
