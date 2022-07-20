@@ -641,6 +641,7 @@ header{
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        margin-left: 30px;
     }
 
     #header .navbar ul a{
@@ -712,7 +713,7 @@ header{
     .trois .class-wrapper{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         
     }
