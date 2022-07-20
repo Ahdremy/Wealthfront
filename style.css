@@ -1,0 +1,777 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* General Styling */
+
+body{
+    background-color: #e1e2ef;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 100vh;
+}
+
+a{
+    text-decoration: none;
+    color: brown;
+}
+
+/* General Styling */
+
+
+/* Header */
+
+header{
+    padding: 10px 20px;
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+    left: 0%;
+    top: 0;
+    width: 100vw;
+    height: auto;
+}
+
+#header .navbar .logo{
+    text-transform: uppercase;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#header .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    padding: 0 10px;
+}
+
+#header .navbar ul{
+    list-style: none;
+    position: absolute;
+    background-color: #816fb6;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow-x: hidden;
+    flex-direction: column;
+    transition: .8s ease left;
+}
+
+#header .navbar ul.active{
+    left: 0;
+}
+
+#header .navbar ul a{
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    margin: 6px 0;
+    padding: 16px;
+    display: block;
+    transition: 0.3s ease-in transform;
+}
+
+#header .navbar ul a:hover{
+    color: lightgray;
+    transform: scale(1.05);
+}
+
+#header .hamburger{
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    border: 3px solid black;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    cursor: pointer;
+    transform: scale(.8);
+    margin-right: 10px;
+    position: absolute;
+    top: 0;
+    right: 3%;
+}
+
+#header .hamburger .bar{
+    height: 2px;
+    width: 30px;
+    position: relative;
+    background-color: black;
+    z-index: -1;
+}
+
+#header .hamburger .bar::after,
+#header .hamburger .bar::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: black;
+    transition: .3s ease;
+    transition-property: top, bottom;
+}
+
+#header .hamburger .bar::after{
+    top: 8px;
+}
+
+#header .hamburger .bar::before{
+    bottom: 8px;
+}
+
+#header .hamburger.active .bar::before{
+    bottom: 0;
+}
+#header .hamburger.active .bar::after{
+    top: 0;
+}
+
+/* Header */
+
+
+/* First Section */
+
+.uno-container{
+    width: 100%;
+    height: 500px;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(./images/sec1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.uno-contents{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.uno-header{
+    text-align: center;
+    margin-top: 160px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 2.3rem;
+    color: white;
+}
+
+.uno-contents p{
+    color: white;
+    font-weight: 300;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar{
+    width: 70%;
+    height: 35px;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+    backdrop-filter: blur(4px) saturate(180%);
+    box-shadow: 0px 0px 1px rgb(0, 0, 0);
+}
+
+.search-bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: #cac7ff;
+}
+
+::placeholder{
+    color: rgba(245, 245, 245, 0.5);
+    font-size: 16px;
+}
+
+/* First Section */
+
+
+/* Second Section */
+
+
+.deux .headtxt{
+    margin: 30px 0 20px 0;
+}
+
+.deux .deux-header{
+    font-weight: 700;
+    font-size: 2.1rem;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.headtxt p{
+    width: 100%;
+    text-align: justify;
+    padding: 0 30px;
+}
+
+.headtxt a{
+    color: black;
+    border-bottom: 1px solid brown;
+    transition: .3s ease transform;
+}
+
+.features{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 15px 0;
+}
+
+.feature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.feature img{
+    padding-bottom: 5px;
+}
+
+/* Second Section */
+
+
+/* Third Section */
+
+.class-wrapper{
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.classbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 430px;
+    overflow: hidden;
+    background: indigo;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.imgc{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    display: block;
+}
+
+.imgc img{
+    width: 100%;
+    height: 100%;
+}
+
+.card-info{
+    margin: 30px 0;
+    color: white;
+    margin: 20px;
+    margin-top: 30px;
+}
+
+.card-info h3{
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.card-info p{
+    font-size: .9em;
+    font-weight: 300;
+}
+
+.extra-info{
+    margin: 30px 20px 20px 20px;
+}
+
+.extra-info h2{
+    font-weight: 700;
+    font-size: 2.1rem;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.extra-info p{
+    width: 100%;
+    text-align: center;
+    padding: 0 30px;
+}
+
+/* Third Section */
+
+/* Fourth Section */
+
+.quartre{
+    background: #eae4eb;
+}
+
+.vertical{
+    width: 1px;
+    height: 70px;
+    margin-top: 20px;
+}
+
+.stats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.stats h3{
+    font-weight: 900;
+    font-size: 2rem;
+    color: #4840b7;
+}
+
+.statistics{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 20px;
+    align-items: center;
+}
+
+.quartre h2{
+    font-weight: 700;
+    font-size: 1.9rem;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-top: 50px;
+}
+
+.card-wrapper{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#card{
+    line-height: 1.6;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    width: 50%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right top, #41c2aa, #4b0082);
+    border-radius: 15px;
+    margin: 20px 0;
+    padding: 2em;
+    text-align: center;
+}
+
+#card:hover{
+    transform: scale(1.05);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+}
+
+#card .sidebar{
+    border-radius: 50%;
+    background-color: white;
+    padding: 25px;
+}
+
+#card .main-bar{
+    margin-top: 25px;
+    color: white;
+}
+
+#card .main-bar .tds{
+    font-size: 1em;
+    font-weight: 300;
+}
+
+#card .main-bar .th{
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.quartre .qp{
+    font-size: 1em;
+    text-align: center;
+    margin: 0 80px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.cardb{
+    line-height: 1.6;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    width: 80%;
+    height: 200px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    background: #858ece;
+    border-radius: 15px;
+    margin: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.cardb:hover{
+    transform: scale(1.02);
+}
+
+.cardb .tag{
+    border-radius: 15px;
+    background: #fff6c2;
+    color: #816fb6;
+    width: 35%;
+    margin-bottom: 50px;
+    position: absolute;
+    left: 60%;
+    top: 15%;
+}
+
+.cardb h3{
+    font-size: 1.05em;
+    margin-top: 40px;
+    width: 100%;
+    text-align: left;
+    padding-top: 80px;
+    padding-left: 10px;
+}
+
+/* Fourth Section */
+
+
+/* Fifth Section */
+
+#cinq .container{
+    width: 100%;
+    height: 300px;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(./images/sec1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-top: 10px;
+}
+
+.cinq-text{
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+}
+
+.cinq-text h3{
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.cinq-text p{
+    font-weight: 300;
+}
+
+.explore-btn{
+    background: white;
+    color: black;
+    padding: 10px;
+    width: 70%;
+    border-radius: 15px;
+    font-size: .8em;   
+}
+
+.explore-btn:hover{
+    background: #816fb6;
+    color: white;
+}
+/* Fifth Section */
+
+/* Footer */
+
+#footer .container{
+    background: #381a56;
+}
+
+#footer .footer-logo{
+    font-size: .7em;
+    color: white;
+    display: none;
+    max-width: 600px;
+}
+
+#footer .hyperlinks{
+    color: white;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#footer .hyperlinks .linkies{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+#footer .hyperlinks .cash{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0;
+}
+
+#footer .hyperlinks a{
+    color: white;
+    padding: 3px 0;
+    font-size: .7em;
+    font-weight: 300;
+}
+
+#footer h3{
+    font-weight: 700;
+    font-size: 1em;
+    padding-bottom: 10px;
+}
+
+/* Footer */
+
+/* For Tablets */
+
+@media only screen and (min-width:768px){
+
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+    }
+
+    .classbox{
+        width: 500px;
+        height: 530px;
+    }
+
+    .imgc{
+        width: 100%;
+        height: 480px;
+    }
+
+    .class-wrapper{
+        max-width: 1200px;
+        display: flex;
+    }
+
+    #card{
+        height: 250px;
+        width: 60%;
+    }
+
+    .card-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
+    #cinq .container{
+        height: 400px;
+    }
+
+    .cinq-text{
+        top: 45%;
+        left: 28%;
+    }
+
+    #footer .footer-logo{
+        display: block;
+        padding: 10px;
+    }
+    
+}
+
+/* For Tablets */
+
+/* For Desktop */
+
+@media only screen and (min-width:1200px){
+    #header .hamburger{
+        display: none;
+    }
+
+    #header .navbar{
+        margin-left: 140px;
+    }
+
+    #header .navbar .logo{
+        font-size: 2rem;
+    }
+    
+    #header .navbar ul{
+        position: initial;
+        display: flex;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #header .navbar ul a{
+        font-size: 1rem;
+    }
+
+    #header .navbar ul a{
+        color: black;
+        margin-left: 20px;
+    }
+    
+    #header .navbar ul li{
+        display: inline-block;
+        margin-left: 20px;
+    }
+
+    #header .navbar ul li a{
+        color: black;
+    }
+
+    #header .navbar ul li a:hover{
+        color: white;
+        background: #4b0082;
+        border-radius: 7px;
+        padding: 5px 9px;
+    }
+
+
+    #header .navbar ul li a::after{
+        display: none;
+    }
+
+    #header .navbar ul a:hover{
+        color: white;
+        background: #4b0082;
+        border-radius: 7px;
+        padding: 5px 9px;
+    }
+
+    .uno-container{
+        height: 700px;
+    }
+
+    .uno-header{
+        margin-top: 280px;
+    }
+
+    .uno-header{
+        font-size: 3rem;
+    }
+
+    .deux .deux-header{
+        font-size: 2.7rem;
+        padding-top: 40px;
+    }
+
+    .headtxt p{
+        width: 100%;
+        text-align: center;
+        padding: 0 120px;
+    }
+
+    .features{
+        display: flex;
+        justify-content: space-between;
+        margin: 50px;
+    }
+
+    .trois .class-wrapper{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-items: center;
+        grid-gap: 40px;
+        margin-left: 113px;
+        
+    }
+
+    .classbox{
+        width: 400px;
+        height: 400px;
+    }
+
+    .imgc{
+        width: 100%;
+        height: 400px;
+    }
+
+    .statistics{
+        margin: 5px 250px;
+    }
+
+    .card-wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #card{
+        flex-direction: row;
+        align-items: flex-start;
+        width: 300px;
+        margin: 30px;
+    }
+
+    .cards{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    #cinq .container{
+        height: 500px;
+    }
+
+    .cinq-text h3{
+        font-size: 3rem;
+    }
+
+    .cinq-text p{
+        font-size: 1.3rem;
+    }
+
+
+
+}
+
+
+
+
+
+/* For Desktop */
