@@ -629,11 +629,11 @@ header{
     }
 
     #header .navbar{
-        margin-left: 100px;
+        margin-left: 50px;
     }
 
     #header .navbar .logo{
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
     
     #header .navbar ul{
