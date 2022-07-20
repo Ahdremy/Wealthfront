@@ -628,10 +628,6 @@ header{
         display: none;
     }
 
-    #header .navbar{
-        margin-left: 50px;
-    }
-
     #header .navbar .logo{
         font-size: 1.7rem;
     }
@@ -714,11 +710,10 @@ header{
     }
 
     .trois .class-wrapper{
-        display: grid;
-        grid-template-columns: auto auto auto;
-        justify-items: center;
-        grid-gap: 40px;
-        margin-left: 113px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
         
     }
 
